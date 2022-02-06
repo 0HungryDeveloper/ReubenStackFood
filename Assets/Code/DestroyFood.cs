@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class DestroyFood : MonoBehaviour
 {
+
     public GameObject gameObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void OnCollisionEnter2D(Collision2D collision2d) {
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Destroy(gameObject, 2.5f);
+        if(!collision2d.gameObject.CompareTag("Player")){
+            Destroy(gameObject);
+        }
     }
 }

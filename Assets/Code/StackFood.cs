@@ -6,15 +6,15 @@ public class StackFood : MonoBehaviour
 {
     int points = 0;
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    void OnCollisionEnter2D(Collision2D collision2d) {
         
-        if(other.gameObject.CompareTag("Blue") ||
-            other.gameObject.CompareTag("Green") ||
-            other.gameObject.CompareTag("Pink")){
-                Debug.Log("Puntuación: "+ points++);   
-        }    
-            
-        if(other.gameObject.CompareTag("Red")){
+        if(collision2d.gameObject.CompareTag("Blue") ||
+            collision2d.gameObject.CompareTag("Green") ||
+            collision2d.gameObject.CompareTag("Pink")){
+                Debug.Log("Puntuación: "+ (++points));   
+                //Unimos la comida
+        }else{
+            //Si en la pila de comida esta algo que no queremos
             Debug.Log("Puntuación: "+ points--);
         }
     }

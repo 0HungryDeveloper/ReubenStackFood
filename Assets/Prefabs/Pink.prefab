@@ -208,3 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 4444401834105925695}
+  collider2D: {fileID: -7026686616104394235}
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
